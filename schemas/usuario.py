@@ -1,8 +1,8 @@
 from pydantic import BaseModel, EmailStr
 
 class UsuarioCreate(BaseModel):
-    nome: str
-    email: EmailStr
+    nome: str = ""
+    email: EmailStr = ""
 
 class UsuarioOut(BaseModel):
     id: int
