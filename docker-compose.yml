@@ -1,0 +1,10 @@
+services:
+  snackbar-api:
+    build: .
+    container_name: snackbar-api
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+    restart: unless-stopped
